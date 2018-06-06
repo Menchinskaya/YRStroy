@@ -1,0 +1,394 @@
+<html>
+ <head>
+  <title>Строительные материалы</title>
+  <style>
+ body {
+background: 
+    font: 14px Arial, Helvetica, sans-serif; /* Рубленый шрифт текста */
+    margin: 0; /* Отступы на странице */
+   }
+   h1 {
+    font-size: 36px; /* Размер шрифта заголовка шапки */
+    margin: 0; /* Убираем отступы */
+    color: #fc6; /* Цвет текста заголовка шапки */
+   }
+   h2 {
+    margin-top: 0; /* Убираем отступ сверху */
+   }
+   *, *::after, *::before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-o-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+#mainmenu {
+position: relative;
+background: #444444;
+height: 40px;
+margin: 30px 0;
+padding: 0;
+float: left;
+width: 100%;
+z-index: 10
+}
+#mainmenu ul {
+clear: left;
+position: relative;
+right: 50%;
+height: 40px;
+float: right;
+text-align: center;
+font: 15px Arial, Helvetica, sans-serif;
+list-style: none;
+padding: 0;
+margin: 0
+}
+
+/** Основные пункты **/
+
+#mainmenu > ul > li {
+position: relative;
+left: 50%;
+float: left;
+height: 40px;
+padding: 0;
+margin: 0
+}
+#mainmenu > ul > li > a {
+border-left: 1px solid #666;
+display: block;
+color: #fff;
+text-decoration: none;
+padding: 0 20px;
+line-height: 40px;
+}
+#mainmenu > ul > li:first-child > a {
+border: none
+}
+#mainmenu > ul > li:hover > a, #mainmenu > ul > li.hover > a, #mainmenu > ul > li.active > a {
+color: #fff
+}
+#mainmenu > ul > li:hover, #mainmenu > ul > li.hover, #mainmenu > ul > li.active {
+background: #666
+}
+
+/* Выпадающие подпункты */
+
+#mainmenu ul li ul {
+position: absolute;
+left: 0;
+top: 40px;
+display: none;
+list-style: none;
+visibility: hidden;
+padding: 0;
+margin: 0;
+width: 200px
+}
+#mainmenu > ul > li ul li {
+background-color: #666;
+position: relative;
+left: 0;
+display: list-item;
+float: none;
+height: auto;
+margin: 0;
+text-align: left;
+}
+#mainmenu ul li ul li a {
+border-bottom: 1px solid #999;
+display: block;
+color: #fff;
+padding: 10px 15px;
+text-decoration: none;
+}
+#mainmenu ul li ul li.parent a {
+position: relative;
+}
+#mainmenu ul li ul > li.parent > a::before {
+border-top: 1px solid #fff;
+border-right: 1px solid #fff;
+content: "";
+display: block;
+position: absolute;
+right: 15px;
+top: 50%;
+transform: translateY(-50%) rotate(45deg);
+height: 6px;
+width: 6px;
+}
+#mainmenu ul li ul li:hover, #mainmenu ul li ul li.hover {
+background-color: #444
+}
+#mainmenu ul li:hover ul, #mainmenu ul li.hover ul {
+display: block
+}
+
+/* Выпадающие пункты второго уровня */
+
+#mainmenu ul li:hover > ul {
+opacity: 1;
+visibility: visible;
+margin: 0;
+}
+#mainmenu ul li ul li ul {
+top: 0;
+left: 200px;
+margin: 0 0 0 20px;
+width: 180px
+}
+ul{
+  margin: 0 82% 0 0;
+  padding: 7% 5% 1% 2%;
+
+font: 15px Arial, Helvetica, sans-serif;
+list-style: none;
+  }
+ul.nav li ul{
+  display: none;
+}
+ul.nav li{
+  list-style: none;
+}
+ul.nav li:hover > ul{
+  display: block;
+}
+ul.nav li {
+  background: #444;
+  border: 1px solid #666;
+
+  list-style: none;
+  width: 150px;
+}
+ul.nav li a {
+  text-decoration: none;
+color: #fff;
+  display: block;
+  padding: 5px 5px 5px 15px;
+}
+ul.nav li ul {
+ display: none;	/*скрываем вложенные пункты*/
+}
+ 
+    /*Выпадающее меню*/
+ 
+ul.nav li:hover {
+  position: relative;
+  background: #666;
+}
+ul.nav li:hover > ul {
+  display: block;
+}
+ul.nav li:hover ul{
+  position: absolute;
+  top: 0;
+  left: 150px; /*меню раскрывается вправо*/
+}
+
+   .content {
+    	margin: -10% 18% 60% 20%; /* Значения отступа от левого блока */
+    	padding: 10px; /* Поля внутри блока */
+    	border: 4px double black; /* Рамка контента */
+    	background: d8bb96;
+    }
+
+    .katalog {
+	margin: -58% 10% 20% 18.5%; /* Значения отступа от левого блока */
+	padding: 10px; /* Поля внутри блока */
+	overflow: hidden;
+	border: 4px double black; /* Рамка контента */
+	background: c9aa83;
+	height: 150%;
+	width: 65%;
+    }
+
+.catalog-list-04 {
+	margin: 0;
+	padding: 4%;
+	list-style: none;
+}
+.catalog-list-04 li {
+	display: inline-block;
+	margin: 5%;
+	width: 200px;
+	min-width: 100px;
+	max-width: 300px;
+}
+.catalog-list-04 li img {
+	width: 100%;
+}
+    .footer {
+    background: 0a3446; /* Цвет фона подвал (футера) */
+    padding: 50px; /* Поля внутри блока */
+    color: fff; /* Цвет текста футера */
+    clear: left; /* Отменяем действие float */
+   }
+
+hr {
+    border: none; /* Убираем границу */
+    background-color: 955729; /* Цвет линии */
+    color: 955729; /* Цвет линии для IE6-7 */
+    height: 2%; /* Толщина линии */
+   }
+#mymenu {
+    float: left;
+    width: 100%;
+    margin: 20px 10px;
+    list-style: none;
+}
+
+#mymenu li {
+    float: left;
+    width: auto;
+    padding: 0 10px;
+    font-size: 18px;
+}
+
+#mymenu li ul {
+    display: none;
+    width: 200px;
+}
+
+#mymenu li:hover ul {
+    display: block;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#mymenu li ul li {
+    float: left;
+    width: 200px;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+  </style>
+ </head>
+
+ <body bgcolor="#000" background="fon3.png">
+ 
+  <div id="mainmenu">
+<ul>
+<!-- Пункт меню 1 -->
+<li><a href="glavn.html">Главная</a>
+
+<!-- Пункт меню 2 -->
+<li class="active"><a href="katalog.html" class="active">Каталог</a>
+ <ul>
+ <li class="parent"><a href="stroyMat.html">Строительные материалы</a>
+ <ul>
+ <li><a href="SyhSmes.html">Сухие смеси</a></li>
+ <li><a href="DrevMat.html">Древесные материалы</a></li>
+ <li><a href="Izol.html">Изоляция</a></li>
+ <li><a href="Krepeji.html">Крепежи</a></li>
+ <li><a href="ProfTryb.html">Профили и трубы</a></li>
+ </ul>
+ <li class="parent"><a href="#">Электрика</a>
+ <ul>
+ <li><a href="#">Освещение</a></li>
+ <li><a href="#">Кабель</a></li>
+ <li><a href="#">Элементы питания</a></li>
+ </ul>
+ </li>
+<li class="parent"><a href="#">Сантехника</a>
+ <ul>
+ <li><a href="#">Инженерная сантехника</a></li>
+ <li><a href="#">Смесители</a></li>
+ <li><a href="#">Приборы учета</a></li>
+ </ul>
+ </li>
+<li class="parent"><a href="#">Инструменты</a>
+ <ul>
+ <li><a href="#">Ручные инструменты</a></li>
+ <li><a href="#">Электроинструменты</a></li>
+ <li><a href="#">Специализированный инструмент</a></li>
+ <li><a href="#">Расходные материалы</a></li>
+ </ul>
+ </li>
+ </ul>
+</li>
+<!-- Пункт меню 3 -->
+<li><a href="Statiy.html">Статьи</a>
+ <ul>
+ <li><a href="#">Новости</a></li>
+ <ul>
+ <li><a href="#">Рекомендации</a></li>
+ <li><a href="#">СТАТЬЯ 3</a></li>
+ <li><a href="#">СТАТЬЯ 4</a></li>
+ </ul>
+ <li><a href="#">Рекомендации</a></li>
+ <li><a href="#">РАЗДЕЛ СТАТЕЙ 3</a></li>
+ <li><a href="#">РАЗДЕЛ СТАТЕЙ 4</a></li>
+ <li><a href="#">РАЗДЕЛ СТАТЕЙ 5</a></li>
+ </ul>
+</li>
+<!-- Пункт меню 4 -->
+<li><a href="Onas.html">О нас</a>
+</li>
+<!-- Пункт меню 5 -->
+<li><a href="Kontakt.html">Контакты</a>
+</li>
+
+</ul><!-- Конец списка -->
+</div><!-- Конец блока #mainmenu -->
+<div id="sibebar">  
+<ul class="nav">
+  <li><a href="glavn.html">Главная</a>
+  </li>
+  <li><a href="katalog.html">Каталог</a>
+    <ul>
+      <li><a href="#">Строительные материалы</a>
+<ul>
+          <li><a href="#">Сухие смеси</a></li>
+          <li><a href="#">Древесные материалы</a></li>
+	  <li><a href="#">Изоляция</a></li>
+	  <li><a href="#">Крепежи</a></li>
+	  <li><a href="#">Профили и трубы</a></li>
+        </ul>
+</li>
+      <li><a href="#">Электрика</a>
+        <ul>
+          <li><a href="#">Освещение</a></li>
+          <li><a href="#">Кабель</a></li>
+	  <li><a href="#">Элементы питания</a></li>
+	  </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="Statiy.html">Статьи</a>
+<ul>
+      <li><a href="#">Новости</a>
+      <li><a href="#">Рекомендации</a>
+      <li><a href="#">Статья</a>
+      <li><a href="#">Статья</a>
+</ul>
+</li>
+  <li><a href="Onas.html">О нас</a></li>
+  <li><a href="Kontakt.html">Контакты</a></li>
+</ul>
+</div>
+
+<div class="content">
+
+    <h2>Изоляция</h2>
+<br>
+<p>
+</p>
+  </div>
+
+<div class="katalog">
+<ul class="catalog-list-04">
+	<li><img src="img2.jpg"></li><li><img src="img2.jpg"></li><li><img src="img2.jpg"></li><li><img src="img2.jpg"></li><li><img src="img2.jpg"></li><li><img src="img2.jpg"></li><li><img src="img2.jpg"></li><li><img src="img2.jpg"></li><li><img src="img2.jpg"></li>
+</ul>
+</div>
+
+<hr>
+  <div class="footer">© 2018  Компания «ЯРСтрой» <br>
+Электронная почта: Anna1223334444@mail.ru</div>
+ </body>
+</html>
